@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>We are the Scooter brothers</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="ScooterRental.css">
+</head>
+
+<body>
+    <div class="Big Thing">
+        <div class="header">
+            <div class="Greetings Human (No Clankers)">Welcome, Eeeello!</div>
+        </div>
+
+        <h2 class="A title">Available Electric Scooters</h2>
+
+        <div class="scooter-Looks">
+            <div class="scooter1">
+                <h2>Shit box</h2>
+                <p><strong>Battery:</strong> 45%</p>
+                <div class="price">€5/hour</div>
+                <button onclick="rent(this)">Rent Now</button>
+            </div>
+
+            <div class="scooter2">
+                <h2>Normal</h2>
+                <p><strong>Battery:</strong> 92%</p>
+                <div class="price">€11/hour</div>
+                <button onclick="rent(this)">Rent Now</button>
+            </div>
+
+            <div class="scooter3">
+                <h2>WOW</h2>
+                <p><strong>Battery:</strong> 55%</p>
+                <div class="price">€17/hour</div>
+                <button onclick="rent(this)">Being used</button>
+            </div>
+
+            <div class="scooter4">
+                <h2>GoodOne</h2>
+                <p><strong>Battery:</strong> 100%</p>
+                <div class="price">€20/hour</div>
+                <button onclick="rent(this)">Rent Now</button>
+            </div>
+
+            <div class="scooter5">
+                <h2>Money Flex</h2>
+                <p><strong>Battery:</strong> 100%</p>
+                <div class="price">€30/hour</div>
+                <button onclick="rent(this)">Rent Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function rent(button) {
+            if (button.disabled) return;
+            if (button.textContent.trim() === 'Not Available') {
+                alert('This scooter is not available.');
+                return;
+            }
+            button.textContent = 'Rented';
+            button.disabled = true;
+            alert('You rented the scooter. Enjoy your ride!');
+        }
+    </script>
+</body>
+
+</html>
